@@ -9,6 +9,9 @@
 # Statusline.lua
 ![screenshot](https://i.imgur.com/QocSv7V.png)
 
+| :point_up:    | Fork by 27theo for customisation |
+|---------------|:---------------------------------|
+
 # Statusline
 ![screencast](https://i.ibb.co/wgTJ58D/ezgif-4-b462544889e2.gif)
 
