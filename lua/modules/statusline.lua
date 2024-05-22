@@ -22,6 +22,7 @@ local bufname = require('sections._bufname')
 local buficon = require('sections._buficon')
 local editable = require('sections._bufeditable')
 local filesize = require('sections._filesize')
+local motto = require('sections._motto')
 local M = {}
 
 -- Separators
@@ -149,13 +150,16 @@ function M.activeLine()
 	-- Alignment to left
 	statusline = statusline .. '%='
 
+	-- Motto
+	statusline = statusline .. motto.motto() .. space
+
 	-- Component: LSP CURRENT FUCTION --> Requires LSP
 	statusline = statusline .. '%#Statusline_LSP_Func# ' .. lsp.current_function()
 
 
 	-- Scrollbar
 	-- statusline = statusline.."%#Status_Line#"..call('Scrollbar')..space
-
+	
 	-- Component: Modified, Read-Only, Filesize, Row/Col
 	statusline = statusline .. '%#Status_Line#' .. bufmod.is_buffer_modified()
 	statusline = statusline .. editable.editable() .. filesize.get_file_size() .. [[ʟ %l/%L c %c]] .. space
