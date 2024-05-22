@@ -9,8 +9,16 @@
 # Statusline.lua
 ![screenshot](https://i.imgur.com/QocSv7V.png)
 
-| :point_up:    | Fork by 27theo for customisation |
-|---------------|:---------------------------------|
+| :point_up:    | Fork by 27theo |
+|---------------|:---------------|
+
+I've forked this project to enable some customisations that aren't available
+through configuration. I don't want to switch to a more configurable status
+line like lualine, because I love this one. I may tidy up the existing code, as
+it is clearly a work in progress by the original author, but for now I'll just
+be tinkering and hacking on top of the original forked branch.
+
+Thanks to Beau Williams for the original implementation.
 
 # Statusline
 ![screencast](https://i.ibb.co/wgTJ58D/ezgif-4-b462544889e2.gif)
