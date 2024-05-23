@@ -5,7 +5,7 @@ local quotes = vim.fn.readfile(
 )
 
 function M.get_quote()
-	return '"' .. quotes[math.random(1, #quotes - 1)] .. '"'
+	return '"' .. quotes[math.random(1, #quotes)] .. '"'
 end
 
 return M
