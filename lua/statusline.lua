@@ -28,7 +28,6 @@ end
 --                              Statusline                            --
 ------------------------------------------------------------------------
 function M.activeLine()
-	math.randomseed(os.time() * 100000000)
 	statusline.set_quote()
 	if M.lsp_diagnostics == true then
 		vim.wo.statusline = "%!v:lua.require'modules.statusline'.wants_lsp()"

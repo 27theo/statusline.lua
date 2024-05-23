@@ -99,11 +99,15 @@ function M.set_highlights()
   cmd('hi InActive guibg=' .. InactiveLine_bg .. ' guifg=' .. InactiveLine_fg)
 end
 
--- Pick quote
+-- Initial set
 math.randomseed(os.time() * 10000000000)
-local quote = ""
-function M.set_quote() quote = motto.pick_random() end
-M.set_quote()
+local quote = motto.get_quote()
+
+-- Expose a mutator to allow changing manually later
+function M.set_quote()
+	math.randomseed(os.time() * 10000000000)
+	quote = motto.get_quote()
+end
 
 ------------------------------------------------------------------------
 --                              Statusline                            --
@@ -158,7 +162,7 @@ function M.activeLine()
 	statusline = statusline .. '%='
 
 	-- Motto
-	statusline = statusline .. '"' .. quote .. '"' .. space
+	statusline = statusline .. quote .. space
 
 	-- Component: LSP CURRENT FUCTION --> Requires LSP
 	statusline = statusline .. '%#Statusline_LSP_Func# ' .. lsp.current_function()
