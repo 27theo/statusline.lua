@@ -1,11 +1,11 @@
 local M = {}
 
 local quotes = {
-	"Premature optimisation is the root of all evil.",
+	"Premature optimisation is true evil.",
 	"When in doubt, use brute force.",
-	"The best is the enemy of the good.",
+	"Perfect is the enemy of good.",
 	"The best writing is rewriting.",
-	"Don't fear moving slowly, fear standing still.",
+	"Fear standing still, not moving slowly.",
 }
 
 function M.motto(quote)
